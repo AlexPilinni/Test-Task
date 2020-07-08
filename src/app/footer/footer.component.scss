@@ -1,0 +1,26 @@
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 72px;
+  padding: 0 130px;
+  background-color: var(--grey-color);
+  &__logo {
+
+    width: 32px;
+    height: 64px;
+  }
+
+  &__list {
+    margin-top: 22px;
+    font-size: var(--font-size-16);
+    font-family: var(--font-family-Rubik);
+  }
+  &__item {
+    list-style-type: none;
+  }
+  &__item:nth-child(2) {
+    margin: 16px 0;
+  }
+}

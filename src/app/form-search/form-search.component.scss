@@ -1,0 +1,26 @@
+.search {
+  height: 36px;
+  display: flex;
+  align-items: flex-end;
+
+  &__input {
+    border: none;
+    outline:none;
+    border-bottom: 1px solid var(--black-color);
+    margin-right: 10px;
+    font-size: var(--font-size-16);
+    width: 320px;
+  }
+
+
+  &__button {
+    background-color: var(--white-color);
+    color: var(--red-light-color);
+    font-family: var(--font-family-Rubik);
+    font-style: normal;
+    font-weight: var(--font-bold);
+    font-size: var(--font-size-16);
+    outline: none;
+    border: none;
+  }
+}

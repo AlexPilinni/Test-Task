@@ -1,0 +1,30 @@
+.form {
+  padding: 36px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  font-family: var(--font-family-Rubik);
+  background-color: var(--white-color);
+  position: absolute;
+  opacity: 1;
+  z-index: 10;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+
+  &__shadow {
+    position: absolute;
+    opacity: 0.6;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    background-color: var(--black-color);
+  }
+
+  &__input {
+    border: none;
+    border-bottom: 1px solid var(--black-color);
+    outline:none;
+    margin-bottom: 20px;
+  }
+}

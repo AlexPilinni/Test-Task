@@ -1,0 +1,63 @@
+.header {
+  margin: 34px auto;
+  padding: 0 130px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &__logo-text {
+    margin: 0 10px;
+    font-family: var(--font-family-Rubik);
+    font-style: normal;
+    font-weight: var(--font-bold);
+    font-size: var(--font-size-18);
+  }
+
+  &__button {
+    background: var(--red-light-color);
+    border-radius: 4px;
+    color: var(--white-color);
+    width: 113px;
+    height: 38px;
+    font-family: var(--font-family-Rubik);
+    font-style: normal;
+    font-weight: var(--font-bold);
+    font-size: var(--font-size-16);
+    /* identical to box height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  &__form-wrapper {
+    position: fixed;
+    z-index:3;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  &__user-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  &__user {
+    color: var(--red-light-color);
+    font-family: var(--font-family-Rubik);
+    font-size: var(--font-size-16);
+    margin-right: 20px;
+  }
+
+
+}
+

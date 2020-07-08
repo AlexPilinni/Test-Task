@@ -1,0 +1,13 @@
+<div class="channel" >
+  <div class="channel__wrapper-image">
+    <img [attr.src]="channel.image" alt="channel-logo" class="channel__image">
+  </div>
+  <div class="channel__timing">
+    <p class="channel__name">{{channel.name}}</p>
+    <ul class="channel__list">
+      <li class="channel__item channel__item--active">{{channel.schedule[0].time}} {{channel.schedule[0].title}}</li>
+      <li class="channel__item">{{channel.schedule[1].time}} {{channel.schedule[1].title}}</li>
+      <li class="channel__item">{{channel.schedule[2].time}} {{channel.schedule[2].title}}</li>
+    </ul>
+  </div>
+</div>

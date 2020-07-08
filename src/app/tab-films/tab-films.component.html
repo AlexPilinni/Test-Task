@@ -1,0 +1,12 @@
+<div class="tab">
+  <section>
+    <p class="tab__headline">Новинки</p>
+    <ul class="tab__slider">
+      <app-card-film class="tab__film-slide anim" *ngFor="let m of movies | filter: searchValue" [movie]="m" ></app-card-film>
+    </ul>
+  </section>
+  <p class="tab__headline">Жанры</p>
+  <ul  class="tab__slider">
+    <app-card-genre  class="tab__genres-slide anim" *ngFor="let g of genres" [genre]="g"></app-card-genre>
+  </ul>
+</div>

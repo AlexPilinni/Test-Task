@@ -1,0 +1,145 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 304px;
+  height: 394px;
+  padding: 36px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  font-family: var(--font-family-Rubik);
+  background-color: var(--white-color);
+  position: absolute;
+  opacity: 1;
+  z-index: 10;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+
+  &__name {
+    font-size: var(--font-size-28);
+    font-weight: var(--font-bold);
+    margin: 0 0 24px 81px;
+    padding: 0;
+  }
+  &__input {
+    border: none;
+    border-bottom: 1px solid var(--black-color);
+    outline:none;
+    margin-bottom: 20px;
+  }
+  &__inputName {
+    width: 100%;
+    font-size: var(--font-size-16);
+    padding-bottom: 4px;
+  }
+  &__inputPas {
+    width: 100%;
+    font-size: var(--font-size-16);
+    padding-bottom: 4px;
+  }
+  &__top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 230px;
+  }
+  &__item {
+    display: flex;
+    flex-direction: row;
+    width: 230px;
+  }
+  &__check {
+    margin-left: 5px;
+  }
+  .form__item input[type="checkbox"] {
+    opacity: 0;
+  }
+  .form__item label::before{
+    content: "";
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+    border: 1px solid var(--black-color);
+    border-radius: 4px;
+    top: 0;
+  }
+  .form__item label::after {
+    content: "";
+    display: inline-block;
+    height: 6px;
+    width: 9px;
+    border-left: 2px solid;
+    border-bottom: 2px solid;
+
+    transform: rotate(-45deg);
+  }
+  .form__item  label {
+  position: relative;
+}
+  .form__item  label::before,
+  .form__item  label::after {
+    position: absolute;
+  }
+  /*Внешний блок*/
+  .form__item label::before {
+    left: -25px;
+    top: -1px;
+  }
+  /*Галка*/
+  .form__item  label::after {
+    left: -21px;
+    top: 3px;
+  }
+  /*Прячем галку по умолчанию*/
+  .form__item input[type="checkbox"] + label::after {
+    content: none;
+  }
+  /*Показываем галку по состоянию checked*/
+  .form__item input[type="checkbox"]:checked + label::after {
+    content: "";
+  }
+    /*Добавляем фокус к внешнему блоку поддельного чекбокса*/
+  .form__item input[type="checkbox"]:focus + label::before {
+     outline: rgb(59, 153, 252) auto 5px;
+   }
+
+  &__button {
+    background-color: var(--red-light-color);
+    color: var(--white-color);
+    font-size: var(--font-size-16);
+    font-weight: var(--font-bold);
+    margin-left: 60px;
+    width: 113px;
+    height: 38px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+    &:disabled {
+      opacity: 0.5;
+    }
+  }
+
+  &__shadow {
+    position: absolute;
+    opacity: 0.6;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    background-color: var(--black-color);
+  }
+
+  &__question {
+    color: var(--red-light-color);
+    font-size: var(--font-size-12);
+  }
+}
+
+.ng-invalid.ng-touched.form__input{
+  color: var(--red-light-color);
+  border-bottom: 1px solid var(--red-light-color);
+}

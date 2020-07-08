@@ -1,0 +1,14 @@
+.tab {
+  margin-top: 30px;
+  padding: 0 114px 0 130px;
+  height: 696px;
+  max-width: 1440px;
+}
+.tab__channels {
+  display: block;
+  margin: 0 16px 16px 0;
+
+  &:last-child {
+    margin-bottom: 0px;
+  }
+}

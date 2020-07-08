@@ -1,0 +1,6 @@
+<div class="container">
+  <app-navigation></app-navigation>
+  <div class="routs" [@routeAnimations]="prepareRoute(outlet)">
+    <router-outlet #outlet="outlet"></router-outlet>
+  </div>
+</div>

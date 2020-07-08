@@ -1,0 +1,32 @@
+.navigation{
+  padding: 0 130px;
+  margin: 0 auto;
+
+  &__list {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  &__link{
+    margin: 0 12px;
+    padding-bottom: 8px;
+    text-decoration: none;
+    font-size: var(--font-size-25);
+    font-weight: bold;
+    font-family: var(--font-family-Rubik);
+    color: var(--black-color);
+    box-sizing: content-box;
+
+    &--active{
+      border-bottom: 2px solid var(--red-light-color);
+      color: var(--red-light-color);
+    }
+  }
+
+  &__item {
+    list-style-type: none;
+  }
+
+}

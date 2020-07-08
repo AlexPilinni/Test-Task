@@ -1,0 +1,24 @@
+<form class="form" action="" [formGroup]="userProfileForm" (ngSubmit)="onSubmit()">
+  <div class="form__top">
+    <label class="form__item">
+      <p class="form__name">Вход</p>
+    </label>
+    <label class="form__item">
+      <input required id="firstName" class="form__input form__inputName" autofocus type="text" formControlName="firstName" placeholder="Логин" autocomplete="off" maxlength="12">
+    </label>
+    <label class="form__item">
+      <input required class="form__input form__inputPas" type="{{this.inputPassword}}" (mouseout)="mouseoutPass()" (mouseover)="mouseoverPass()" formControlName="password" placeholder="Пароль" autocomplete="off">
+    </label>
+    <div class="form__item">
+      <input class="form__input form__inputCheck" type="checkbox" formControlName="checkbox" id="checkbox_1" >
+      <label class="form__check" for="checkbox_1"> Запомнить </label>
+    </div>
+    <div class="form__question" *ngIf="(userProfileForm.controls['firstName'].invalid && userProfileForm.controls['firstName'].touched) || (userProfileForm.controls['password'].invalid && userProfileForm.controls['password'].touched)">{{this.validatorsService.message}}</div>
+  </div>
+  <div class="form__bottom">
+    <label class="form__item form__item--right">
+      <button class="form__button" type="submit" (click)="onSubmit()" (keyup.enter)="onSubmit()" [disabled]="userProfileForm.invalid">Войти</button>
+    </label>
+  </div>
+</form>
+<div class="form__shadow" (click)="closeFormRegistration()"></div>

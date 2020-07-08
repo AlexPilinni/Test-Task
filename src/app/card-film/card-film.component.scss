@@ -1,0 +1,47 @@
+.slide {
+  position: relative;
+
+  &__poster {
+    position: relative;
+
+    border-radius: 8px;
+    z-index: 1;
+  }
+  &__title {
+    font-family: var(--font-family-Rubik);
+    font-size: var(--font-size-20);
+    margin: 10px 0;
+  }
+  &__image {
+    position: relative;
+  }
+  &__black {
+    display: none;
+    z-index: 10;
+    top: 0;
+    position: absolute;
+    height: 370px;
+    width: 280px;
+    background-color: var(--black-color);
+    opacity: 0.8;
+    border-radius: 8px;
+  }
+
+  &__image:hover {
+    .slide__black {
+      display: block;
+    }
+  }
+
+  &__text{
+    margin: 16px;
+    padding: 0;
+    position: absolute;
+    z-index: 20;
+    top: 0;
+    color: var(--white-color);
+    font-size: var(--font-size-16);
+    font-family: var(--font-family-Rubik);
+  }
+}
+

@@ -1,0 +1,7 @@
+<form action="" class="form">
+  <label for="username" class="form__label">
+    <input id="username" name="username" type="text" class="form__input" [(ngModel)]="placeholder" placeholder="{{this.usersService.__userName}}" autocomplete="off" maxlength="12">
+  </label>
+  <button class="form__button" (click)="editName()">Изменить</button>
+</form>
+<div class="form__shadow" (click)="closeFormEditName()"></div>

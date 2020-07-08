@@ -1,0 +1,5 @@
+<div class="comment">
+  <div class="comment__user">{{comment.nickname}}</div>
+  <div class="comment__text">{{comment.text}}</div>
+  <div *ngIf="comment.nickname === this.usersService.__userName" class="comment__del" (click)="delThisComment()"></div>
+</div>

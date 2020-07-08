@@ -1,0 +1,18 @@
+<div class="header">
+  <div class="header__logo">
+    <img class="header__logo-image" src="../../assets/images/logo.png" alt="logotype">
+    <p class="header__logo-text">Видеосервис</p>
+  </div>
+  <app-form-search></app-form-search>
+  <div class="header__user-wrapper">
+    <div class="header__user" (click)="showFormEditName()">{{this.userName}}</div>
+    <div class="header__button" *ngIf="isButton" (click)="showFormRegistration()">
+      <p class="header__button-text"> Войти</p>
+    </div>
+    <div class="header__button" *ngIf="!isButton" (click)="showLoginButton()">
+      <p class="header__button-text"> Выйти</p>
+    </div>
+  </div>
+</div>
+<app-form-login class="header__form-wrapper" (closeFormRegistrationEmitter)="showFormRegistration()" *ngIf="isRegOpen"></app-form-login>
+<app-form-name class="header__form-wrapper" (closeFormEditNameEmitter)="showFormEditName()" *ngIf="isNameOpen"></app-form-name>

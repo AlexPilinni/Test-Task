@@ -1,0 +1,27 @@
+<section class="movie">
+  <div class="movie__card">
+    <div class="movie__poster">
+      <img [attr.src]="movie.poster" alt="poster" class="movie__image">
+    </div>
+    <div class="movie__list">
+      <div class="movie__item"> Название: {{movie.title}}</div>
+      <div class="movie__item">Страна: {{movie.country}}</div>
+      <div class="movie__item">Жанр: {{movie.genre}}</div>
+      <div class="movie__item">{{movie.about}}</div>
+    </div>
+  </div>
+  <div class="movie__comments">
+    <div class="movie__comments-title">Комментарии</div>
+    <form class="movie__your-post form-group">
+      <label class="movie__comment-label">
+        <textarea class="movie__comment-user form-control" name="comment" placeholder="Введите комментарий..." [(ngModel)]="comment"></textarea>
+      </label>
+      <button class="movie__comment-button" (click)="publishComment()">Опубликовать</button>
+    </form>
+    <div class="movie__history-comments">
+      <ul class="movie__list-comments">
+        <app-card-comment  class="tab__film-slide anim" *ngFor="let c of this.movie.comments" [comment]="c"></app-card-comment>
+      </ul>
+    </div>
+  </div>
+</section>

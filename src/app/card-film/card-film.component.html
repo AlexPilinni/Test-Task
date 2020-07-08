@@ -1,0 +1,9 @@
+<div routerLinkActive="navigation__link--active" [routerLink]="['/player', movie.id]">
+  <div class="slide__image">
+    <img class="slide__poster" [attr.src]="movie.poster" alt="poster">
+    <div class="slide__black" >
+      <p class="slide__text" >{{movie.about}}</p>
+    </div>
+  </div>
+  <p class="slide__title">{{movie.title}}</p>
+</div>
